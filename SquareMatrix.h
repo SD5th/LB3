@@ -9,7 +9,11 @@ class SquareMatrix
     public:
     // конструкторы-деструкторы
         SquareMatrix(int);
-    // деструкторы
+        ~SquareMatrix()
+        {
+            delete matrix;
+        }
+    // деконструкторы
         int Get_Size();
         int Get(int, int);
 
